@@ -1,0 +1,44 @@
+spring:
+  liquibase:
+    enabled: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: habrpguser
+    password: pgpwd4habr
+    url: jdbc:postgresql://localhost:5432/habrdb
+    name: habrdb
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+  application:
+    name: enrollee-registration
+  kafka:
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: com.*
+            type:
+              mapping: EnrolleeDto:com.mihalkovich.entrance_campaign.dto.EnrolleeDto,DreamSpecialityDto:com.mihalkovich.entrance_campaign.dto.DreamSpecialityDto
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  main:
+    allow-bean-definition-overriding: true
+javainuse:
+  rabbitmq:
+    exchange: javainuse.exchange
+    queue: javainuse.queue
+    routingkey: javainuse.routingkey
+server:
+  port: 8100

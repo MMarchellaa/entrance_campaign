@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-speciality
+      author: Mark
+      changes:
+        - createTable:
+            tableName: speciality
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: faculty
+                  type: bigint
+                  constraints:
+                    foreignKeyName: faculty(id)
+                    references: faculty(id)
+                    nullable: false
+              - column:
+                  name: passing_rating
+                  type: integer
+                  constraints:
+                    nullable: false

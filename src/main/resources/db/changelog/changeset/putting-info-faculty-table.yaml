@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: putting-info-faculty
+      author: Mark
+      changes:
+        - insert:
+            tableName: faculty
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: РФиКТ
+              - column:
+                  name: university
+                  value: 1
+        - insert:
+            tableName: faculty
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: Китайского языка
+              - column:
+                  name: university
+                  value: 2

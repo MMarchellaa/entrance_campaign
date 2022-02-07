@@ -1,0 +1,78 @@
+databaseChangeLog:
+  - changeSet:
+      id: putting-info-exams
+      author: Mark
+      changes:
+        - insert:
+            tableName: exams
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: Математика
+              - column:
+                  name: speciality_id
+                  value: 1
+        - insert:
+            tableName: exams
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: Физика
+              - column:
+                  name: speciality_id
+                  value: 1
+        - insert:
+            tableName: exams
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: name
+                  value: Русский язык
+              - column:
+                  name: speciality_id
+                  value: 1
+        - insert:
+            tableName: exams
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: name
+                  value: Русский язык
+              - column:
+                  name: speciality_id
+                  value: 2
+        - insert:
+            tableName: exams
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: name
+                  value: Английский язык
+              - column:
+                  name: speciality_id
+                  value: 2
+        - insert:
+            tableName: exams
+            columns:
+              - column:
+                  name: id
+                  value: 6
+              - column:
+                  name: name
+                  value: Китайский язык
+              - column:
+                  name: speciality_id
+                  value: 2
+
