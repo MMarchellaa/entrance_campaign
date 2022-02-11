@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-exams
+      author: Mark
+      changes:
+        - createTable:
+            tableName: exams
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: speciality_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: speciality(id)
+                    references: speciality(id)

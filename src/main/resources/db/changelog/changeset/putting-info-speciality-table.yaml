@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: putting-info-speciality
+      author: Mark
+      changes:
+        - insert:
+            tableName: speciality
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: АРИСТ
+              - column:
+                  name: faculty
+                  value: 1
+              - column:
+                  name: passing_rating
+                  value: 257
+        - insert:
+            tableName: speciality
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: Китайский язык
+              - column:
+                  name: faculty
+                  value: 2
+              - column:
+                  name: passing_rating
+                  value: 340

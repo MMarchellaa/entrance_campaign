@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/create-university-table.yaml
+  - include:
+      file: db/changelog/changeset/create-faculty-table.yaml
+  - include:
+      file: db/changelog/changeset/create-speciality-table.yaml
+  - include:
+      file: db/changelog/changeset/create-exams-table.yaml
+  - include:
+      file: db/changelog/changeset/putting-info-university-table.yaml
+  - include:
+      file: db/changelog/changeset/putting-info-faculty-table.yaml
+  - include:
+      file: db/changelog/changeset/putting-info-speciality-table.yaml
+  - include:
+      file: db/changelog/changeset/putting-info-exams-table.yaml
